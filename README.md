@@ -1,21 +1,21 @@
 # hacktzi-store-app
 
-### Antes de comenzar
+### Platzi store
 
-Instalar las depencencias del proyecto con:
+Platzi store es una aplicación que te permitira comprar tus productos preferidos acerca de platzi, como increibles camisas, chamarras, tazas y mucho más
 
-### `yarn install`
+## Antes de comenzar
 
-## En caso de no tener expo
-
-La aplicacion se realizará con Expo, para instalar solo escribe en la terminal:
+La aplicacion se realizará con Expo, En caso de no tener lo instalado solo escribe en la terminal:
 
 ### `npm install -g expo-cli exp`
+
+## Instalar las depencencias del proyecto con:
+
+### `yarn install`
 
 Una vez terminado ejecuta la aplicación con: 
 
 ### `yarn start`
 
-### Platzi store
 
-Platzi store es una aplicación que te permitira comprar tus productos preferidos acerca de platzi, como increibles camisas, chamarras, tazas y mucho más
