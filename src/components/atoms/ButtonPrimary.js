@@ -1,9 +1,9 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 
-const ButtonPrimary = ({children, color= '#000', backgroundColor = '#98CA3F', width, height}) => {
+const ButtonPrimary = ({children, color= '#000', backgroundColor = '#98CA3F', width, height, onPress}) => {
   return (
-    <TouchableOpacity style={[styles.button, {backgroundColor, width, height}]}>
+    <TouchableOpacity delayPressIn={0} onPress={onPress} style={[styles.button, {backgroundColor, width, height}]}>
       <Text style={[styles.buttonText, {color}]}>{children}</Text>
     </TouchableOpacity>
   )
