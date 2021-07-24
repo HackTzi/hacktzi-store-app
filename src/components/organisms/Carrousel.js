@@ -1,36 +1,40 @@
-import React, { useRef } from 'react'
-import { StyleSheet, Text, View, Animated, FlatList } from 'react-native'
-import { welcomeData } from './../../provitionalData/welcomeData'
-import Paginator from '../atoms/Paginator'
-import WelcomeItem from '../molecules/WelcomeItem'
+// @flow
+/* eslint linebreak-style: ["error", "windows"] */
+import React, { useRef } from 'react';
+import {
+  StyleSheet, View, Animated,
+} from 'react-native';
+import { welcomeData } from '../../provitionalData/welcomeData';
+import Paginator from '../atoms/Paginator';
+import WelcomeItem from '../molecules/WelcomeItem';
 
 const Carrousel = () => {
-  const scrollX = useRef(new Animated.Value(0)).current
+  const scrollX = useRef(new Animated.Value(0)).current;
   return (
     <View style={styles.container}>
       <Animated.FlatList
         data={welcomeData}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }, id) => <WelcomeItem item={item} />}
+        keyExtractor={item => item.id}
+        renderItem={({ item }, id) => <WelcomeItem key={id} item={item} />}
         scrollEventThrottle={32}
         horizontal
         showsHorizontalScrollIndicator={false}
         pagingEnabled
         bounces={false}
         onScroll={Animated.event([{ nativeEvent: { contentOffset: { x: scrollX } } }], {
-          useNativeDriver: false
+          useNativeDriver: false,
         })}
       />
       <Paginator data={welcomeData} scrollX={scrollX} />
     </View>
-  )
-}
+  );
+};
 
-export default Carrousel
+export default Carrousel;
 
 const styles = StyleSheet.create({
   container: {
     flex: 0.8,
     alignItems: 'center',
-  }
-})
+  },
+});

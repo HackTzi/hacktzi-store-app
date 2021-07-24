@@ -1,15 +1,15 @@
-import React from 'react'
-import { StyleSheet, TouchableOpacity } from 'react-native'
+// @flow
+/* eslint linebreak-style: ["error", "windows"] */
+import React from 'react';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 
-const LoginWith = ({children, backgroundColor}) => {
-  return (
-    <TouchableOpacity style={[styles.circle, {backgroundColor}]}>
-      {children}
-    </TouchableOpacity>
-  )
-}
+const LoginWith = ({ children, backgroundColor }) => (
+  <TouchableOpacity style={[styles.circle, { backgroundColor }]}>
+    {children}
+  </TouchableOpacity>
+);
 
-export default LoginWith
+export default LoginWith;
 
 const styles = StyleSheet.create({
   circle: {
@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     backgroundColor: 'white',
-    borderRadius: 30
-  }
-})
+    borderRadius: 30,
+  },
+});
